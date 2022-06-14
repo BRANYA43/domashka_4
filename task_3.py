@@ -1,3 +1,6 @@
+from task_1 import get_input_number
+
+
 def get_sequence_numbers(some_list: list, a: int, b: int):
     while a < b or a > b:
         if a < b:
@@ -7,13 +10,6 @@ def get_sequence_numbers(some_list: list, a: int, b: int):
             some_list.append(a)
             a -= 1
     some_list.append(b)
-
-
-def get_input_number(message: str) -> int:
-    ret = ''
-    while not ret.isdigit():
-        ret = input(message)
-    return int(ret)
 
 
 def main():

@@ -1,7 +1,6 @@
 from random import randint
 
 some_list = [randint(0, 10) for i in range(randint(10, 50))]
-
 count = 0
 
 for i, _ in enumerate(some_list):
