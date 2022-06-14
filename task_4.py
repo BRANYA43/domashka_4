@@ -1,6 +1,6 @@
 def print_stairs(start: int, end: int):
     some_str = ''
-    for i in range(start, end):
+    for i in range(start, end + 1):
         some_str += str(i)
         print(some_str)
 
