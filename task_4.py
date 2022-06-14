@@ -1,4 +1,13 @@
-some_str = ''
-for n in range(1, 10):
-    some_str += str(n)
-    print(some_str)
+def print_stairs(start: int, end: int):
+    some_str = ''
+    for i in range(start, end):
+        some_str += str(i)
+        print(some_str)
+
+
+def main():
+    print_stairs(1, 9)
+
+
+if __name__ == '__main__':
+    main()
