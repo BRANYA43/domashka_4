@@ -1,8 +1,4 @@
-def get_input_number(message: str) -> int:
-    ret = ''
-    while not ret.isdigit():
-        ret = input(message)
-    return int(ret)
+from task_1 import get_input_number
 
 
 def get_length(sequence: list) -> int:
