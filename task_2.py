@@ -5,14 +5,14 @@ def get_length(sequence: list) -> int:
     return len(sequence)
 
 
-def get_sum_elements(sequence: list) -> int:
+def get_sum(sequence: list) -> int:
     ret = 0
     for element in sequence:
         ret += element
     return ret
 
 
-def get_multiplication_elements(sequence: list) -> int:
+def get_multiplication(sequence: list) -> int:
     ret = 1
     for element in sequence:
         ret *= element
@@ -21,7 +21,7 @@ def get_multiplication_elements(sequence: list) -> int:
 
 def get_arithmetical_mean(sequence: list) -> float:
     try:
-        ret = get_sum_elements(sequence) / get_length(sequence)
+        ret = get_sum(sequence) / get_length(sequence)
         ret = ret * 10 // 1 / 10
         return ret
     except ZeroDivisionError:
@@ -39,7 +39,7 @@ def get_big_number(sequence: list) -> tuple:
     return index, n
 
 
-def get_amount_even_numbers(sequence: list) -> int:
+def get_count_even_numbers(sequence: list) -> int:
     count = 0
     for element in sequence:
         if element % 2 == 0:
@@ -47,7 +47,7 @@ def get_amount_even_numbers(sequence: list) -> int:
     return count
 
 
-def get_amount_odd_numbers(sequence: list) -> int:
+def get_count_odd_numbers(sequence: list) -> int:
     count = 0
     for element in sequence:
         if element % 2 != 0:
@@ -63,7 +63,7 @@ def get_second_big_number(sequence: list, first_big_number: int) -> tuple:
     return n
 
 
-def get_amount_element_equal_number(sequence: list, number: int) -> int:
+def get_count_element(sequence: list, number: int) -> int:
     count = 0
     for element in sequence:
         if element == number:
@@ -82,15 +82,15 @@ def main():
 
     print(f'Послідовність введених елементів: {list_number}')
     print(f'Кількість елементів: {get_length(list_number)}')
-    print(f'Сума елементів: {get_sum_elements(list_number)}')
-    print(f'Добуток елементів: {get_multiplication_elements(list_number)}')
+    print(f'Сума елементів: {get_sum(list_number)}')
+    print(f'Добуток елементів: {get_multiplication(list_number)}')
     print(f'Середнє арифметичне елементів: {get_arithmetical_mean(list_number)}')
-    print(f'Кількість парних елементі: {get_amount_even_numbers(list_number)}')
-    print(f'Кількість не парних елементів: {get_amount_odd_numbers(list_number)}')
+    print(f'Кількість парних елементі: {get_count_even_numbers(list_number)}')
+    print(f'Кількість не парних елементів: {get_count_odd_numbers(list_number)}')
     big_number = get_big_number(list_number)
     print(f'Найбільший елемент {big_number[1]} за номером {big_number[0]}')
     print(f'Другий найбільший елемент: {get_second_big_number(list_number, big_number[1])}')
-    print(f'Кількість найбільших елементів: {get_amount_element_equal_number(list_number, big_number[1])}')
+    print(f'Кількість найбільшого елементів: {get_count_element(list_number, big_number[1])}')
 
 
 if __name__ == '__main__':
