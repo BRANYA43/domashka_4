@@ -1,4 +1,4 @@
-def get_alphabet():
+def get_alphabet() -> str:
     ret = ''
     for elem in range(ord('A'), ord('Z') + 1):
         ret += chr(elem)

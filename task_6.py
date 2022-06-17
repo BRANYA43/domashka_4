@@ -8,5 +8,5 @@ for i, _ in enumerate(some_list):
         if some_list[i - 1] < some_list[i] > some_list[i + 1]:
             count += 1
 
-print(some_list)
-print(count)
+print(f'Cписок: {some_list}')
+print(f'Кількість елементів які сусідніх: {count}')
