@@ -55,10 +55,10 @@ def get_count_odd_numbers(sequence: list) -> int:
     return count
 
 
-def get_second_big_number(sequence: list, first_big_number: int) -> tuple:
+def get_second_big_number(sequence: list) -> tuple:
     n = 0
     for element in sequence:
-        if n < element < first_big_number:
+        if n < element < get_big_number(sequence):
             n = element
     return n
 
@@ -89,7 +89,7 @@ def main():
     print(f'Кількість не парних елементів: {get_count_odd_numbers(list_number)}')
     big_number = get_big_number(list_number)
     print(f'Найбільший елемент {big_number[1]} за номером {big_number[0]}')
-    print(f'Другий найбільший елемент: {get_second_big_number(list_number, big_number[1])}')
+    print(f'Другий найбільший елемент: {get_second_big_number(list_number)}')
     print(f'Кількість найбільшого елементів: {get_count_element(list_number, big_number[1])}')
 
 
