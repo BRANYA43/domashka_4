@@ -9,4 +9,4 @@ for i, _ in enumerate(some_list):
             count += 1
 
 print(f'Cписок: {some_list}')
-print(f'Кількість елементів які сусідніх: {count}')
+print(f'Кількість елементів які більше сусідніх: {count}')
